@@ -6,48 +6,16 @@
     <title>GIT TASK</title>
 </head>
 <body>
-   <!-- **********TASK 2 ************---- -->
-    <div class="main-div">
-        <div onmouseover="normal();" onmouseout="hover();">
-            <button id="buttonId">BUTTON</button>
-        </div>
-    </div>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .main-div{
-            background-color: greenyellow;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        button{
-            height: 120px;
-            width: 150px;
-            font-size: 2em;
-            border-radius: 20px;
-            margin: 10px;
-            border: 2px solid greenyellow;
-        }
-        .colorRed{
-            background-color:purple;
-            color: white;
-        }
-    </style>
+    <!--------********* TASK 3 **************--------- -->
+   <div id="app"></div>
     <script>
-        function normal(){
-            var redButton=document.getElementById('buttonId');
-                redButton.classList.add("colorRed");
-       }
-       function hover(){
-            var redButton=document.getElementById('buttonId');
-                redButton.classList.remove("colorRed");
-       }
+        const techGirls=["Dami","Balqees","Mary","Esther"];
+
+        var app =document.querySelector('#app');
+        app.innerHTML='<ul>' +techGirls.map(
+            function(techGirl){
+                return '<li>' + techGirl +'</li>';
+            }).join('') + '</ul>';
     </script>
 </body>
 </html>
