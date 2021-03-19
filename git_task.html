@@ -6,7 +6,7 @@
     <title>GIT TASK</title>
 </head>
 <body>
-    --********** TASK 1*********--
+    <!-- --********** TASK 1*********--
     <script>
         function getEvenNumbers(){ //creates a function that gets even numbers
             var numberArray=[1,2,4,9,0,8,24,19]; //an array of numbers
@@ -19,6 +19,50 @@
         }
 
         getEvenNumbers() //calls the function created earlier
+    </script>
+-->
+    **********TASK 2 ************----
+    <div class="main-div">
+        <div onmouseover="normal();" onmouseout="hover();">
+            <button id="buttonId">BUTTON</button>
+        </div>
+    </div>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main-div{
+            background-color: greenyellow;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button{
+            height: 120px;
+            width: 150px;
+            font-size: 2em;
+            border-radius: 20px;
+            margin: 10px;
+            border: 2px solid greenyellow;
+        }
+        .colorRed{
+            background-color:purple;
+            color: white;
+        }
+    </style>
+    <script>
+        function normal(){
+            var redButton=document.getElementById('buttonId');
+                redButton.classList.add("colorRed");
+       }
+       function hover(){
+            var redButton=document.getElementById('buttonId');
+                redButton.classList.remove("colorRed");
+       }
     </script>
 </body>
 </html>
